@@ -193,7 +193,7 @@
 			dependencies = (
 			);
 			name = team21;
-			productName = "team21";
+			productName = team21;
 			productReference = 13B07F961A680F5B00A75B9A /* team21.app */;
 			productType = "com.apple.product-type.application";
 		};
