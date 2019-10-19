@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.twilio.Twilio;
@@ -19,7 +20,8 @@ import java.time.LocalDateTime;
 public class PhoneCall {
 	  public String account_sid = "xxxxxxxxxxxxxx";
 	  public String auth_token = "xxxxxxxxxxxxxx";
-	  
+	  public String phoneNumber = "+14807472545";
+	  public String condition = "";
 	  public ArrayList<String> timestamps = new ArrayList<String>();
 	  
 	  public static void main(String[] args) {
@@ -39,7 +41,7 @@ public class PhoneCall {
 		  
 		  Twilio.init(account_sid, auth_token);
 		  
-		    Message message = Message.creator(new PhoneNumber("+14807472545"),
+		    Message message = Message.creator(new PhoneNumber(phoneNumber),
 		        new PhoneNumber("+17602922451"), 
 		        "This is an emergency text. Carl Banks will seizure soon.").create();
 
@@ -59,5 +61,14 @@ public class PhoneCall {
 		  for (int i = 0; i < timestamps.size(); i++)
 			  response = response + timestamps.get(i) + "<br>";
 		  return response;
+	  }
+	  
+	  
+	  @GetMapping("/settings")
+	  @ResponseBody
+	  public String settings(@RequestBody String setCondition, @RequestBody String setNumber) {
+		  phoneNumber = setNumber;
+		  condition = setCondition;
+		  return "Settings updated";
 	  }
 }
