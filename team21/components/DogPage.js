@@ -22,7 +22,7 @@ export default class BinaryButtons extends React.Component {
             <View style={styles.rotateMe}>
               <View style={styles.buttons}>
                 <TouchableOpacity style={styles.button1} onPress={() => {
-                  fetch('Input URL here', {
+                  fetch('http://localhost:8080/call', {
                     method: 'POST',
                     headers: {
                       Accept: 'application/json',
@@ -43,7 +43,7 @@ export default class BinaryButtons extends React.Component {
                 </TouchableOpacity>
       
                 <TouchableOpacity style={styles.button2} onPress={() => {
-                  fetch('Input URL here', {
+                  fetch('http://localhost:8080/call', {
                     method: 'POST',
                     headers: {
                       Accept: 'application/json',
