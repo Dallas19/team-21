@@ -2,6 +2,7 @@
 package com.example.demo;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,10 +12,15 @@ import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+
 @Controller
 public class PhoneCall {
 	  public String account_sid = "xxxxxxxxxxxxxx";
 	  public String auth_token = "xxxxxxxxxxxxxx";
+	  
+	  public ArrayList<String> timestamps = new ArrayList<String>();
 	  
 	  public static void main(String[] args) {
 		    		    
@@ -37,7 +43,10 @@ public class PhoneCall {
 		        new PhoneNumber("+17602922451"), 
 		        "This is an emergency text. Carl Banks will seizure soon.").create();
 
-		    System.out.println(message.getSid());
+	
+		   timestamps.add(e) 
+		    
+		   System.out.println(message.getSid());
 	       return "Welcome to Spring Boot";
 	  }
 }
