@@ -11,7 +11,7 @@ import {
     Image
   } from 'react-native';
   import personPic from '../assets/person_placeholder.png';
-  import dogPic from '../assets/dog_placeholder.png';
+  import dogPic from '../assets/snoopy.jpg';
 
 
 
@@ -46,14 +46,14 @@ const styles = StyleSheet.create({
     container: {
       flex: 2,
       justifyContent: 'center',
-      backgroundColor: '#ecf0f1',
-      padding: 8,
+      backgroundColor: '#ecf0f1',   
+      alignItems: 'stretch',
+      
     },
     rotateMe: {
-      transform: [{ rotate: '90deg'}]
+      //transform: [{ rotate: '90deg'}]
     },
     buttons: {
-      flex: 1,
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
@@ -67,17 +67,19 @@ const styles = StyleSheet.create({
     button1: {
       alignItems: 'center',
       backgroundColor: 'blue',
-      padding: 10,
+      //padding: 10,
       color: 'white',
       flex: 1,
-      height:200
+      height:200,
+      width:400
     },
     button2: {
       alignItems: 'center',
       backgroundColor: 'yellow',
-      padding: 10,
+      //padding: 10,
       color: 'white',
       flex: 1,
-      height:200
+      height:200,
+      width:400
     }
     });
