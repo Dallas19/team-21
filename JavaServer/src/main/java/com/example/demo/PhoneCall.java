@@ -35,7 +35,7 @@ public class PhoneCall {
 		  
 		    Message message = Message.creator(new PhoneNumber("+14807472545"),
 		        new PhoneNumber("+17602922451"), 
-		        "This is an emergency text. Carl Banks will seizure soon.").create();
+		        "This is an emergency text. Carl Banks will have a seizure soon.").create();
 
 		    System.out.println(message.getSid());
 	       return "Welcome to Spring Boot";
