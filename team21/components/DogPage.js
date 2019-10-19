@@ -21,7 +21,20 @@ export default class BinaryButtons extends React.Component {
             <View style={styles.container}>
             <View style={styles.rotateMe}>
               <View style={styles.buttons}>
-                <TouchableOpacity style={styles.button1} onPress={this.onPress}>
+                <TouchableOpacity style={styles.button1} onPress={() => {
+                  fetch('Input URL here', {
+                    method: 'POST',
+                    headers: {
+                      Accept: 'application/json',
+                      'Content-Type': 'application/json',
+                    },
+                    body: {
+                      JSON:stringify({
+
+                      }),
+                    }
+                  });
+                })}>
                   <Text style={styles.paragraph}> Blue </Text>
                   <Image 
                   style={{width: 50, height: 100}}
@@ -29,7 +42,20 @@ export default class BinaryButtons extends React.Component {
                   />
                 </TouchableOpacity>
       
-                <TouchableOpacity style={styles.button2} onPress={this.onPress}>
+                <TouchableOpacity style={styles.button2} onPress={() => {
+                  fetch('Input URL here', {
+                    method: 'POST',
+                    headers: {
+                      Accept: 'application/json',
+                      'Content-Type': 'application/json',
+                    },
+                    body: {
+                      JSON:stringify({
+
+                      }),
+                    }
+                  });
+                }}>
                   <Text style={styles.paragraph}> Yellow </Text>
                   <Image 
                   style={{width: 50, height: 100}}
