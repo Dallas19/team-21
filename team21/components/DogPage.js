@@ -34,7 +34,7 @@ export default class BinaryButtons extends React.Component {
                       }),
                     }
                   });
-                })}>
+                }}>
                   <Text style={styles.paragraph}> Blue </Text>
                   <Image 
                   style={{width: 50, height: 100}}
