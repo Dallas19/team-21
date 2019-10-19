@@ -43,10 +43,21 @@ public class PhoneCall {
 		        new PhoneNumber("+17602922451"), 
 		        "This is an emergency text. Carl Banks will seizure soon.").create();
 
-	
-		   timestamps.add(e) 
+			  DateTimeFormatter date = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+			  LocalDateTime now = LocalDateTime.now();
+			  System.out.println(date.format(now));
+			  timestamps.add(date.format(now)); 
 		    
 		   System.out.println(message.getSid());
 	       return "Welcome to Spring Boot";
+	  }
+	  
+	  @GetMapping("/record")
+	  @ResponseBody
+	  public String record() {
+		  String response = "";
+		  for (int i = 0; i < timestamps.size(); i++)
+			  response = response + timestamps.get(i) + "<br>";
+		  return response;
 	  }
 }
