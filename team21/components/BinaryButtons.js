@@ -12,6 +12,7 @@ import {
   } from 'react-native';
   import personPic from '../assets/person_placeholder.png';
   import dogPic from '../assets/snoopy.jpg';
+  import { createStackNavigator } from 'react-navigation-stack'
 
 
 

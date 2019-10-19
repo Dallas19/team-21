@@ -17,29 +17,34 @@ import {
   TouchableOpacity,
   Card
 } from 'react-native';
+import { Router, Scene } from 'react-native-router-flux'
 import BinaryButtons from './components/BinaryButtons'
+import BigButton from './components/BigButton'
+import { createAppContainer } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation-stack'
 
-/*
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-*/
-//Orientation.lockToLandscape();
 
-class App extends React.Component {
+
+export default class App extends React.Component {
   render() {
-  return (
-    
-    <View style={styles.container}>
-      <BinaryButtons />
-    </View>
-  );
+    return <AppContainer  style={styles.container}/>;
   }
 }
+
+const RootStack = createStackNavigator(
+  {
+    Home: BigButton,
+    BinaryButtons: BinaryButtons,
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
+
+const AppContainer = createAppContainer(RootStack);
+
+
+
 
 const styles = StyleSheet.create({
 container: {
@@ -59,4 +64,3 @@ paragraph: {
   textAlign: 'center',
 }
 });
-export default App;
