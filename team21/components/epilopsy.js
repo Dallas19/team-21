@@ -10,8 +10,8 @@ import {
     Card,
     Image
   } from 'react-native';
-  import seizureCurrent from '../assets/seizureCurrent.jpeg'
-  import seizureComing from '../assets/seizureComing.jpg'
+  import seizureCurrent from '../assets/seizureCurrent.png';
+  import seizureComing from '../assets/seizureComing.jpg';
 
 
 

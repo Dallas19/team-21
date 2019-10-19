@@ -17,37 +17,29 @@ import {
   TouchableOpacity,
   Card
 } from 'react-native';
-import { Router, Scene } from 'react-native-router-flux'
 import BinaryButtons from './components/BinaryButtons'
-import BigButton from './components/BigButton'
-import { createAppContainer } from 'react-navigation'
-import { createStackNavigator } from 'react-navigation-stack'
-import DogPage from './components/DogPage'
-import epilopsy from './components/epilopsy'
 
+/*
+import {
+  Header,
+  LearnMoreLinks,
+  Colors,
+  DebugInstructions,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+*/
+//Orientation.lockToLandscape();
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
-    return <AppContainer  style={styles.container}/>;
+  return (
+    
+    <View style={styles.container}>
+      <BinaryButtons />
+    </View>
+  );
   }
 }
-
-const RootStack = createStackNavigator(
-  {
-    Home: BigButton,
-    BinaryButtons: BinaryButtons,
-    DogPage: DogPage,
-    epilopsy: epilopsy
-  },
-  {
-    initialRouteName: 'Home',
-  }
-);
-
-const AppContainer = createAppContainer(RootStack);
-
-
-
 
 const styles = StyleSheet.create({
 container: {
@@ -67,3 +59,4 @@ paragraph: {
   textAlign: 'center',
 }
 });
+export default App;
