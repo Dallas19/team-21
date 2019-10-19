@@ -22,19 +22,10 @@ export default class BinaryButtons extends React.Component {
             <View style={styles.rotateMe}>
               <View style={styles.buttons}>
                 <TouchableOpacity style={styles.button1} onPress={() => {
-                  fetch('http://localhost:8080/call', {
-                    method: 'POST',
-                    headers: {
-                      Accept: 'application/json',
-                      'Content-Type': 'application/json',
-                    },
-                    body: {
-                      JSON:stringify({
+                  fetch('http://100.118.223.150:8080/call').then( 
+                    () => console.log('resolved'), 
 
-                      }),
-                    }
-                  });
-                }}>
+                  ).catch(console.log('bruh'));                }}>
                   <Text style={styles.paragraph}> Blue </Text>
                   <Image 
                   style={{width: 50, height: 100}}
@@ -43,18 +34,11 @@ export default class BinaryButtons extends React.Component {
                 </TouchableOpacity>
       
                 <TouchableOpacity style={styles.button2} onPress={() => {
-                  fetch('http://localhost:8080/call', {
-                    method: 'POST',
-                    headers: {
-                      Accept: 'application/json',
-                      'Content-Type': 'application/json',
-                    },
-                    body: {
-                      JSON:stringify({
+                  fetch('http://100.118.223.150:8080/call').then( 
+                    () => console.log('resolved'), 
 
-                      }),
-                    }
-                  });
+                  ).catch(console.log('bruh'));                  
+                
                 }}>
                   <Text style={styles.paragraph}> Yellow </Text>
                   <Image 
