@@ -10,8 +10,8 @@ import {
     Card,
     Image
   } from 'react-native';
-  import dogBowl from '../assets/dog_bowl.jpg';
-  import dogPlaying from '../assets/dog_playing.jpg';
+  import dogBowl from '../assets/dogBowl1Final.png';
+  import dogPlaying from '../assets/dogPlayingFinal.png';
 
 
 
@@ -20,15 +20,14 @@ export default class BinaryButtons extends React.Component {
         return (
             <View style={styles.container}>
             <View style={styles.rotateMe}>
-              <View style={styles.buttons}>
+              <View style={styles.buttons }>
                 <TouchableOpacity style={styles.button1} onPress={() => {
                   fetch('http://100.118.223.150:8080/call').then( 
                     () => console.log('resolved'), 
 
                   ).catch(console.log('bruh'));                }}>
-                  <Text style={styles.paragraph}> Blue </Text>
                   <Image 
-                  style={{width: 50, height: 100}}
+                  style={{width: 200, height: 200, justifyContent:'center', alignItems:'center', top:50}}
                   source={dogBowl}
                   />
                 </TouchableOpacity>
@@ -40,9 +39,8 @@ export default class BinaryButtons extends React.Component {
                   ).catch(console.log('bruh'));                  
                 
                 }}>
-                  <Text style={styles.paragraph}> Yellow </Text>
                   <Image 
-                  style={{width: 50, height: 100}}
+                  style={{width: 200, height: 200, justifyContent:'center', alignItems:'center', top:50}}
                   source={dogPlaying}
                   />
                 </TouchableOpacity>
@@ -58,7 +56,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor: '#ecf0f1',   
       alignItems: 'stretch',
-      
+      height:'100%'
     },
     rotateMe: {
       //transform: [{ rotate: '90deg'}]
@@ -67,6 +65,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
+      height: '100%'
     },
     paragraph: {
       margin: 24,
@@ -77,19 +76,17 @@ const styles = StyleSheet.create({
     button1: {
       alignItems: 'center',
       backgroundColor: 'blue',
-      //padding: 10,
       color: 'white',
       flex: 1,
-      height:200,
-      width:400
+      height:'100%',
+      //width:400
     },
     button2: {
       alignItems: 'center',
       backgroundColor: 'yellow',
-      //padding: 10,
       color: 'white',
       flex: 1,
-      height:200,
-      width:400
+      height:'100%'
+      //width:400
     }
     });

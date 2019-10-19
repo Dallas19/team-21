@@ -10,8 +10,8 @@ import {
     Card,
     Image
   } from 'react-native';
-  import personPic from '../assets/person_placeholder.png';
-  import dogPic from '../assets/snoopy.jpg';
+  import personPic from '../assets/personFinal.png';
+  import dogPic from '../assets/snoopy2Final.png';
   import { createStackNavigator } from 'react-navigation-stack'
   import DogPage from './DogPage'
   import epilopsy from './epilopsy'
@@ -24,17 +24,15 @@ export default class BinaryButtons extends React.Component {
             <View style={styles.rotateMe}>
               <View style={styles.buttons}>
                 <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate('epilopsy')}>
-                  <Text style={styles.paragraph}> Blue </Text>
                   <Image 
-                  style={{width: 50, height: 100}}
+                  style={{width:'50%', height:'50%', justifyContent:'center', alignItems:'center', top:50}}
                   source={personPic}
                   />
                 </TouchableOpacity>
       
                 <TouchableOpacity style={styles.button2} onPress={() => this.props.navigation.navigate('DogPage')}>
-                  <Text style={styles.paragraph}> Yellow </Text>
                   <Image 
-                  style={{width: 50, height: 100}}
+                  style={{width:'50%', height:'50%',justifyContent:'center', alignItems:'center', top:50}}
                   source={dogPic}
                   />
                 </TouchableOpacity>
@@ -50,7 +48,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor: '#ecf0f1',   
       alignItems: 'stretch',
-      
+      height:'100%'
     },
     rotateMe: {
       //transform: [{ rotate: '90deg'}]
@@ -59,6 +57,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
+      height:'100%'
     },
     paragraph: {
       margin: 24,
@@ -69,19 +68,17 @@ const styles = StyleSheet.create({
     button1: {
       alignItems: 'center',
       backgroundColor: 'blue',
-      //padding: 10,
       color: 'white',
       flex: 1,
-      height:200,
-      width:400
+      height:'100%',
+     // width:400
     },
     button2: {
       alignItems: 'center',
       backgroundColor: 'yellow',
-      //padding: 10,
       color: 'white',
       flex: 1,
-      height:200,
-      width:400
+      height:'100%',
+     // width:400
     }
     });
