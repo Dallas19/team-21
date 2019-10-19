@@ -21,7 +21,11 @@ export default class BinaryButtons extends React.Component {
             <View style={styles.container}>
             <View style={styles.rotateMe}>
               <View style={styles.buttons}>
-                <TouchableOpacity style={styles.button1} onPress={this.onPress}>
+                <TouchableOpacity style={styles.button1} onPress={() => {
+                  fetch('http://100.118.223.150:8080/call').then( 
+                    () => console.log('resolved'), 
+
+                  ).catch(console.log('bruh'));                }}>
                   <Text style={styles.paragraph}> Blue </Text>
                   <Image 
                   style={{width: 50, height: 100}}
@@ -29,7 +33,13 @@ export default class BinaryButtons extends React.Component {
                   />
                 </TouchableOpacity>
       
-                <TouchableOpacity style={styles.button2} onPress={this.onPress}>
+                <TouchableOpacity style={styles.button2} onPress={() => {
+                  fetch('http://100.118.223.150:8080/call').then( 
+                    () => console.log('resolved'), 
+
+                  ).catch(console.log('bruh'));                  
+                
+                }}>
                   <Text style={styles.paragraph}> Yellow </Text>
                   <Image 
                   style={{width: 50, height: 100}}
