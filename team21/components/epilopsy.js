@@ -10,8 +10,8 @@ import {
     Card,
     Image
   } from 'react-native';
-  import seizureCurrent from '../assets/seizureCurrent.jpeg'
-  import seizureComing from '../assets/seizureComing.jpg'
+  import seizureCurrent from '../assets/seizureFinal.png'
+  import seizureComing from '../assets/seizureIncomingFinal.png'
 
 
 
@@ -28,9 +28,8 @@ export default class BinaryButtons extends React.Component {
                   ).catch(console.log('bruh'));
                 
                 }}>
-                  <Text style={styles.paragraph}> Blue </Text>
                   <Image 
-                  style={{width: 50, height: 100}}
+                  style={{width: 200, height: 200, justifyContent:'center', alignItems:'center', top:50}}
                   source={seizureCurrent}
                   />
                 </TouchableOpacity>
@@ -40,9 +39,8 @@ export default class BinaryButtons extends React.Component {
                     () => console.log('resolved'), 
 
                   ).catch(console.log('bruh'));                }}>
-                  <Text style={styles.paragraph}> Yellow </Text>
                   <Image 
-                  style={{width: 50, height: 100}}
+                  style={{width: 200, height: 200, justifyContent:'center', alignItems:'center', top:50}}
                   source={seizureComing}
                   />
                 </TouchableOpacity>
@@ -58,7 +56,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor: '#ecf0f1',   
       alignItems: 'stretch',
-      
+      height:'100%'
     },
     rotateMe: {
       //transform: [{ rotate: '90deg'}]
@@ -67,6 +65,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
+      height:'100%'
     },
     paragraph: {
       margin: 24,
@@ -77,19 +76,15 @@ const styles = StyleSheet.create({
     button1: {
       alignItems: 'center',
       backgroundColor: 'blue',
-      //padding: 10,
       color: 'white',
       flex: 1,
-      height:200,
-      width:400
+      height:'100%'
     },
     button2: {
       alignItems: 'center',
       backgroundColor: 'yellow',
-      //padding: 10,
       color: 'white',
       flex: 1,
-      height:200,
-      width:400
+      height:'100%'
     }
     });
