@@ -13,7 +13,8 @@ import {
   import personPic from '../assets/person_placeholder.png';
   import dogPic from '../assets/snoopy.jpg';
   import { createStackNavigator } from 'react-navigation-stack'
-
+  import DogPage from './DogPage'
+  import epilopsy from './epilopsy'
 
 
 export default class BinaryButtons extends React.Component {
@@ -22,7 +23,7 @@ export default class BinaryButtons extends React.Component {
             <View style={styles.container}>
             <View style={styles.rotateMe}>
               <View style={styles.buttons}>
-                <TouchableOpacity style={styles.button1} onPress={this.onPress}>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate('epilopsy')}>
                   <Text style={styles.paragraph}> Blue </Text>
                   <Image 
                   style={{width: 50, height: 100}}
@@ -30,7 +31,7 @@ export default class BinaryButtons extends React.Component {
                   />
                 </TouchableOpacity>
       
-                <TouchableOpacity style={styles.button2} onPress={this.onPress}>
+                <TouchableOpacity style={styles.button2} onPress={() => this.props.navigation.navigate('DogPage')}>
                   <Text style={styles.paragraph}> Yellow </Text>
                   <Image 
                   style={{width: 50, height: 100}}
